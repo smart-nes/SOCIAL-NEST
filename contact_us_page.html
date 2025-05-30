@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا - سوشيال نيست</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            font-weight: bold;
+            background: #F8F8F8;
+            min-height: 100vh;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode {
+            background: #1a1a1a;
+            color: #F8F8F8;
+        }
+
+        /* Dark Mode Toggle */
+        .mode-toggle {
+            position: fixed;
+            bottom: 20px; /* Updated from top to bottom */
+            right: 80px;
+            z-index: 1001;
+            background: #b91c1c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .dark-mode .mode-toggle {
+            background: #333333;
+        }
+
+        .mode-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Language Toggle */
+        .lang-toggle {
+            position: fixed;
+            bottom: 20px; /* Updated from top to bottom */
+            left: 20px;
+            z-index: 1001;
+            background: #b91c1c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .dark-mode .lang-toggle {
+            background: #333333;
+        }
+
+        .lang-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Navigation Bar */
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #b91c1c;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .dark-mode .nav-bar {
+            background: #333333;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-logo i {
+            color: #FFFFFF;
+            animation: pulse 2s infinite;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+
+        .nav-link:hover {
+            color: #FFFFFF;
+            transform: translateY(-2px);
+            background: rgba(255,255,255,0.2);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #FFFFFF;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .home-button {
+            background: #FFFFFF;
+            color: #b91c1c;
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .dark-mode .home-button {
+            background: #d73737;
+            color: #FFFFFF;
+        }
+
+        .home-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 100px auto 80px; /* Adjusted bottom margin to avoid overlap with fixed buttons */
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        .dark-mode .container {
+            background: rgba(51, 51, 51, 0.95);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            background: #b91c1c;
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dark-mode .header {
+            background: #333333;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .dark-mode .contact-info {
+            background: linear-gradient(135deg, #333333, #1a1a1a);
+        }
+
+        .contact-form {
+            padding: 60px 40px;
+            background: white;
+        }
+
+        .dark-mode .contact-form {
+            background: #333333;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            animation: fadeInRight 0.6s ease-out;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .dark-mode .info-item {
+            background: #1a1a1a;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .info-item.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .info-item:hover {
+            transform: translateX(-10px);
+            box-shadow: 0 10px 25px rgba(185, 28, 28, 0.15);
+        }
+
+        .dark-mode .info-item:hover {
+            box-shadow: 0 10px 25px rgba(215, 55, 55, 0.3);
+        }
+
+        .info-item:nth-child(1) { animation-delay: 0.1s; }
+        .info-item:nth-child(2) { animation-delay: 0.2s; }
+        .info-item:nth-child(3) { animation-delay: 0.3s; }
+        .info-item:nth-child(4) { animation-delay: 0.4s; }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .icon {
+            width: 60px;
+            height: 60px;
+            background: #b91c1c;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 20px;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .dark-mode .icon {
+            background: #d73737;
+        }
+
+        .info-text h3 {
+            color: #1f2937;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .dark-mode .info-text h3 {
+            color: #F8F8F8;
+        }
+
+        .info-text p {
+            color: #6b7280;
+            font-size: 0.95rem;
+        }
+
+        .dark-mode .info-text p {
+            color: #ccc;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            animation: fadeInLeft 0.6s ease-out;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .form-group.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .form-group:nth-child(1) { animation-delay: 0.1s; }
+        .form-group:nth-child(2) { animation-delay: 0.2s; }
+        .form-group:nth-child(3) { animation-delay: 0.3s; }
+        .form-group:nth-child(4) { animation-delay: 0.4s; }
+        .form-group:nth-child(5) { animation-delay: 0.5s; }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #374151;
+            font-weight: 600;
+        }
+
+        .dark-mode label {
+            color: #F8F8F8;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: #f9fafb;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .dark-mode input,
+        .dark-mode textarea {
+            background: #1a1a1a;
+            border-color: #555;
+            color: #F8F8F8;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #b91c1c;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .dark-mode input:focus,
+        .dark-mode textarea:focus {
+            background: #333333;
+            border-color: #d73737;
+            box-shadow: 0 0 0 3px rgba(215, 55, 55, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background: #b91c1c;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .dark-mode .submit-btn {
+            background: #d73737;
+        }
+
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(185, 28, 28, 0.3);
+        }
+
+        .dark-mode .submit-btn:hover {
+            box-shadow: 0 10px 25px rgba(215, 55, 55, 0.3);
+        }
+
+        .submit-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .social-links {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .social-links h3 {
+            margin-bottom: 20px;
+            color: #1f2937;
+        }
+
+        .dark-mode .social-links h3 {
+            color: #F8F8F8;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            background: #b91c1c;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .dark-mode .social-icon {
+            background: #d73737;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 5px 15px rgba(185, 28, 28, 0.3);
+        }
+
+        .dark-mode .social-icon:hover {
+            box-shadow: 0 5px 15px rgba(215, 55, 55, 0.3);
+        }
+
+        .facebook { background: #1877F2 !important; }
+        .twitter { background: #1DA1F2 !important; }
+        .instagram { background: #E4405F !important; }
+        .tiktok { background: #000000 !important; }
+        .whatsapp { background: #25D366 !important; }
+        .telegram { background: #0088cc !important; }
+        .youtube { background: #FF0000 !important; }
+
+        /* WhatsApp floating button - تم تعديل هذا القسم */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px; /* مسافة من أسفل الصفحة */
+            right: 20px; /* مسافة من يمين الصفحة */
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+            color: white;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            }
+            50% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.6);
+            }
+            100% {
+                box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .contact-info, .contact-form {
+                padding: 40px 20px;
+            }
+
+            .info-item:hover {
+                transform: none;
+            }
+
+            /* تعديلات الشاشات الصغيرة لزر الواتساب - تم تعديل هذا القسم */
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+                bottom: 80px; /* أعلى من زر الوضع الليلي قليلاً */
+                right: 15px; /* نفس المسافة من اليمين مثل زر الوضع الليلي */
+            }
+
+            .social-icons {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .social-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2rem;
+            }
+
+            .mode-toggle, .lang-toggle {
+                padding: 8px 12px;
+                font-size: 0.9rem;
+            }
+
+            .mode-toggle {
+                right: 15px; /* Adjusted for smaller screens */
+                bottom: 15px;
+            }
+            .lang-toggle {
+                left: 15px; /* Adjusted for smaller screens */
+                bottom: 15px;
+            }
+
+
+            .nav-menu {
+                gap: 10px;
+            }
+
+            .nav-link {
+                padding: 6px 10px;
+                font-size: 0.9rem;
+            }
+
+            .home-button {
+                padding: 6px 12px;
+                font-size: 0.9rem;
+            }
+            .container {
+                margin-bottom: 70px; /* Ensure enough space for bottom buttons on small screens */
+            }
+        }
+
+        .success-message {
+            background: #d1fae5;
+            color: #065f46;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: none;
+            animation: slideDown 0.5s ease-out;
+        }
+
+        .dark-mode .success-message {
+            background: #065f46;
+            color: #d1fae5;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(0);
+            animation: ripple-animation 0.6s linear;
+            pointer-events: none;
+        }
+
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* Animation classes */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .animate-on-scroll.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="index.html" class="nav-logo">
+            <i class="fas fa-share-alt"></i>
+            <span class="ar-text">سوشيال نيست</span>
+            <span class="en-text" style="display: none;">SOCIAL NEST</span>
+        </a>
+        
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#contact" class="nav-link ar-text">تواصل معنا</a>
+                <a href="#contact" class="nav-link en-text" style="display: none;">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a href="index.html" class="home-button">
+                    <i class="fas fa-home"></i>
+                    <span class="ar-text">الرئيسية</span>
+                    <span class="en-text" style="display: none;">Home</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <button class="mode-toggle" onclick="toggleDarkMode()">
+        <i class="fas fa-moon"></i>
+        <span class="ar-text">الوضع الليلي</span>
+        <span class="en-text" style="display: none;">Dark Mode</span>
+    </button>
+
+    <button class="lang-toggle" onclick="toggleLanguage()">
+        <span class="ar-text">English</span>
+        <span class="en-text" style="display: none;">العربية</span>
+    </button>
+
+    <div class="container">
+        <div class="header">
+            <h1 class="ar-text">تواصل معنا</h1>
+            <h1 class="en-text" style="display: none;">Contact Us</h1>
+            <p class="ar-text">نحن هنا للإجابة على استفساراتكم وتقديم أفضل خدمة ممكنة</p>
+            <p class="en-text" style="display: none;">We're here to answer your inquiries and provide the best possible service</p>
+        </div>
+
+        <a href="https://wa.me/201234567890" class="whatsapp-float" target="_blank" title="تواصل معنا عبر واتساب">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <div class="content">
+            <div class="contact-info">
+                <div class="info-item animate-on-scroll">
+                    <div class="icon"><i class="fas fa-envelope"></i></div>
+                    <div class="info-text">
+                        <h3 class="ar-text">البريد الإلكتروني</h3>
+                        <h3 class="en-text" style="display: none;">Email</h3>
+                        <p>info@socialnest.com</p>
+                    </div>
+                </div>
+
+                <div class="info-item animate-on-scroll">
+                    <div class="icon"><i class="fas fa-phone"></i></div>
+                    <div class="info-text">
+                        <h3 class="ar-text">أرقام الهاتف</h3>
+                        <h3 class="en-text" style="display: none;">Phone Numbers</h3>
+                        <p>+20 123 456 7890</p>
+                        <p>+20 111 222 3333</p>
+                    </div>
+                </div>
+
+                <div class="info-item animate-on-scroll">
+                    <div class="icon"><i class="fab fa-whatsapp"></i></div>
+                    <div class="info-text">
+                        <h3 class="ar-text">واتساب</h3>
+                        <h3 class="en-text" style="display: none;">WhatsApp</h3>
+                        <p>+20 123 456 7890</p>
+                        <p>+20 111 222 3333</p>
+                    </div>
+                </div>
+
+                <div class="info-item animate-on-scroll">
+                    <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="info-text">
+                        <h3 class="ar-text">العنوان</h3>
+                        <h3 class="en-text" style="display: none;">Address</h3>
+                        <p class="ar-text">شارع النيل، القاهرة، مصر</p>
+                        <p class="en-text" style="display: none;">Nile Street, Cairo, Egypt</p>
+                    </div>
+                </div>
+
+                <div class="info-item animate-on-scroll">
+                    <div class="icon"><i class="fab fa-whatsapp"></i></div>
+                    <div class="info-text">
+                        <h3 class="ar-text">قنوات واتساب</h3>
+                        <h3 class="en-text" style="display: none;">WhatsApp Channels</h3>
+                        <p><a href="#" style="color: #25D366; text-decoration: none;" class="ar-text">قناة الأخبار</a>
+                        <a href="#" style="color: #25D366; text-decoration: none;" class="en-text" style="display: none;">News Channel</a></p>
+                        <p><a href="#" style="color: #25D366; text-decoration: none;" class="ar-text">قناة العروض</a>
+                        <a href="#" style="color: #25D366; text-decoration: none;" class="en-text" style="display: none;">Offers Channel</a></p>
+                    </div>
+                </div>
+
+                <div class="info-item animate-on-scroll">
+                    <div class="icon"><i class="fab fa-telegram"></i></div>
+                    <div class="info-text">
+                        <h3 class="ar-text">قنوات تليجرام</h3>
+                        <h3 class="en-text" style="display: none;">Telegram Channels</h3>
+                        <p><a href="#" style="color: #0088cc; text-decoration: none;">@socialnest_news</a></p>
+                        <p><a href="#" style="color: #0088cc; text-decoration: none;">@socialnest_offers</a></p>
+                    </div>
+                </div>
+
+                <div class="info-item animate-on-scroll">
+                    <div class="icon"><i class="far fa-clock"></i></div>
+                    <div class="info-text">
+                        <h3 class="ar-text">ساعات العمل</h3>
+                        <h3 class="en-text" style="display: none;">Working Hours</h3>
+                        <p class="ar-text">الأحد - الخميس: 9:00 ص - 6:00 م</p>
+                        <p class="en-text" style="display: none;">Sunday - Thursday: 9:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+
+                <div class="social-links animate-on-scroll">
+                    <h3 class="ar-text">تابعونا على</h3>
+                    <h3 class="en-text" style="display: none;">Follow Us On</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon tiktok" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-icon youtube" title="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-icon telegram" title="Telegram"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <div class="success-message" id="successMessage">
+                    <span class="ar-text">تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.</span>
+                    <span class="en-text" style="display: none;">Your message has been sent successfully! We will contact you soon.</span>
+                </div>
+
+                <form id="contactForm">
+                    <div class="form-group animate-on-scroll">
+                        <label for="name" class="ar-text">الاسم الكامل</label>
+                        <label for="name" class="en-text" style="display: none;">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group animate-on-scroll">
+                        <label for="email" class="ar-text">البريد الإلكتروني</label>
+                        <label for="email" class="en-text" style="display: none;">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group animate-on-scroll">
+                        <label for="phone" class="ar-text">رقم الهاتف</label>
+                        <label for="phone" class="en-text" style="display: none;">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group animate-on-scroll">
+                        <label for="subject" class="ar-text">الموضوع</label>
+                        <label for="subject" class="en-text" style="display: none;">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group animate-on-scroll">
+                        <label for="message" class="ar-text">الرسالة</label>
+                        <label for="message" class="en-text" style="display: none;">Message</label>
+                        <textarea id="message" name="message" class="ar-text" placeholder="اكتب رسالتك هنا..." required></textarea>
+                        <textarea id="message-en" name="message-en" class="en-text" style="display: none;" placeholder="Write your message here..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn animate-on-scroll">
+                        <span class="ar-text">إرسال الرسالة</span>
+                        <span class="en-text" style="display: none;">Send Message</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // وظيفة تبديل اللغة
+        function toggleLanguage() {
+            const arElements = document.querySelectorAll('.ar-text');
+            const enElements = document.querySelectorAll('.en-text');
+            const htmlElement = document.documentElement;
+            const messageTextareaAr = document.getElementById('message');
+            const messageTextareaEn = document.getElementById('message-en');
+            
+            arElements.forEach(el => {
+                el.style.display = el.style.display === 'none' ? (el.tagName === 'TEXTAREA' || el.tagName === 'LABEL' || el.tagName === 'H1' || el.tagName === 'H3' || el.tagName === 'P' || el.tagName === 'SPAN' || el.tagName === 'BUTTON' || el.tagName === 'A' ? 'block' : 'inline') : 'none';
+            });
+            
+            enElements.forEach(el => {
+                 el.style.display = el.style.display === 'none' ? (el.tagName === 'TEXTAREA' || el.tagName === 'LABEL' || el.tagName === 'H1' || el.tagName === 'H3' || el.tagName === 'P' || el.tagName === 'SPAN' || el.tagName === 'BUTTON' || el.tagName === 'A' ? 'block' : 'inline') : 'none';
+            });
+            
+            if (htmlElement.getAttribute('dir') === 'rtl') {
+                htmlElement.setAttribute('dir', 'ltr');
+                htmlElement.setAttribute('lang', 'en');
+                // Ensure correct display for textareas after language switch
+                if (messageTextareaAr) messageTextareaAr.style.display = 'none';
+                if (messageTextareaEn) messageTextareaEn.style.display = 'block';
+
+            } else {
+                htmlElement.setAttribute('dir', 'rtl');
+                htmlElement.setAttribute('lang', 'ar');
+                 // Ensure correct display for textareas after language switch
+                if (messageTextareaAr) messageTextareaAr.style.display = 'block';
+                if (messageTextareaEn) messageTextareaEn.style.display = 'none';
+            }
+        }
+        
+        // وظيفة تبديل الوضع الليلي
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            
+            // تغيير أيقونة الوضع الليلي
+            const icon = document.querySelector('.mode-toggle i');
+            if (document.body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+
+        // وظيفة التحقق من ظهور العناصر عند التمرير
+        function checkScroll() {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('animate-in');
+                }
+            });
+        }
+
+        // تشغيل التحقق عند التمرير وعند التحميل
+        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('load', () => {
+            checkScroll();
+            // Initialize language to Arabic by default
+            const enElements = document.querySelectorAll('.en-text');
+            enElements.forEach(el => {
+                 if (el.id !== 'message-en') { // Keep the english textarea hidden initially
+                    el.style.display = 'none';
+                 }
+            });
+            const messageTextareaEn = document.getElementById('message-en');
+            if (messageTextareaEn) messageTextareaEn.style.display = 'none';
+
+
+            const arElements = document.querySelectorAll('.ar-text');
+             arElements.forEach(el => {
+                el.style.display = (el.tagName === 'TEXTAREA' || el.tagName === 'LABEL' || el.tagName === 'H1' || el.tagName === 'H3' || el.tagName === 'P' || el.tagName === 'SPAN' || el.tagName === 'BUTTON' || el.tagName === 'A' ? 'block' : 'inline');
+            });
+             document.documentElement.setAttribute('dir', 'rtl');
+             document.documentElement.setAttribute('lang', 'ar');
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate form submission
+            const successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'block';
+            
+            // Reset form
+            this.reset();
+             // Ensure textareas are reset to their initial language display
+            const messageTextareaAr = document.getElementById('message');
+            const messageTextareaEn = document.getElementById('message-en');
+            if (document.documentElement.getAttribute('lang') === 'ar') {
+                if (messageTextareaAr) messageTextareaAr.style.display = 'block';
+                if (messageTextareaEn) messageTextareaEn.style.display = 'none';
+            } else {
+                if (messageTextareaAr) messageTextareaAr.style.display = 'none';
+                if (messageTextareaEn) messageTextareaEn.style.display = 'block';
+            }
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000);
+        });
+
+        // Add floating animation to form inputs
+        const inputs = document.querySelectorAll('input, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'scale(1.02)';
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'scale(1)';
+            });
+        });
+
+        // Add ripple effect to submit button
+        document.querySelector('.submit-btn').addEventListener('click', function(e) {
+            // Check if the click is on the button itself, not on its children (spans)
+            if (e.target !== this) return;
+
+            const ripple = document.createElement('span');
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+            
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            ripple.classList.add('ripple');
+            
+            this.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+   // هذا الكود لمنع النقر بالزر الأيمن
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+// هذا الكود لمحاولة منع فتح أدوات المطور (غير فعال بشكل كامل)
+document.onkeydown = function(e) {
+    if (e.keyCode == 123) { // F12
+        return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { // Ctrl+Shift+I
+        return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) { // Ctrl+Shift+J
+        return false;
+    }
+    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { // Ctrl+U
+        return false;
+    }
+}
+    </script>
+</body>
+</html>
