@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سوشيال نيست - Social Nest | شركة التسويق الرقمي</title>
+    <title>سوشيال نيست - Social Nest</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
     <style>
@@ -12,7 +12,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+    
         body {
             font-family: 'Cairo', sans-serif;
             font-weight: bold;
@@ -22,12 +22,12 @@
             background-color: #F8F8F8;
             transition: all 0.3s ease;
         }
-
+    
         body.dark-mode {
             background-color: #1a1a1a;
             color: #F8F8F8;
         }
-
+    
         /* Dark Mode Toggle */
         .mode-toggle {
             position: fixed;
@@ -47,12 +47,12 @@
             align-items: center;
             gap: 8px;
         }
-
+    
         .mode-toggle:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
-
+    
         /* Language Toggle */
         .lang-toggle {
             position: fixed;
@@ -69,12 +69,12 @@
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
-
+    
         .lang-toggle:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
-
+    
         /* Header */
         .header {
             background: #b91c1c;
@@ -87,11 +87,11 @@
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
         }
-
+    
         .dark-mode .header {
             background: #333333;
         }
-
+    
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -100,7 +100,7 @@
             align-items: center;
             padding: 0 2rem;
         }
-
+    
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
@@ -108,23 +108,23 @@
             align-items: center;
             gap: 10px;
         }
-
+    
         .logo i {
             color: #FFFFFF;
             animation: pulse 2s infinite;
         }
-
+    
         @keyframes pulse {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.1); }
         }
-
+    
         .nav-menu {
             display: flex;
             list-style: none;
             gap: 2rem;
         }
-
+    
         .nav-menu a {
             color: white;
             text-decoration: none;
@@ -132,12 +132,12 @@
             transition: all 0.3s ease;
             position: relative;
         }
-
+    
         .nav-menu a:hover {
             color: #FFFFFF;
             transform: translateY(-2px);
         }
-
+    
         .nav-menu a::after {
             content: '';
             position: absolute;
@@ -148,11 +148,11 @@
             background: #FFFFFF;
             transition: width 0.3s ease;
         }
-
+    
         .nav-menu a:hover::after {
             width: 100%;
         }
-
+    
         /* Hero Section */
         .hero {
             background: #b91c1c;
@@ -165,11 +165,11 @@
             position: relative;
             overflow: hidden;
         }
-
+    
         .dark-mode .hero {
             background: #333333;
         }
-
+    
         .hero::before {
             content: '';
             position: absolute;
@@ -180,12 +180,12 @@
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23fff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23fff" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="200" r="100" fill="url(%23a)"/><circle cx="800" cy="300" r="150" fill="url(%23a)"/><circle cx="400" cy="700" r="120" fill="url(%23a)"/></svg>');
             animation: float 6s ease-in-out infinite;
         }
-
+    
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-20px); }
         }
-
+    
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -196,7 +196,7 @@
                 transform: translateY(0);
             }
         }
-
+    
         @keyframes fadeInLeft {
             from {
                 opacity: 0;
@@ -207,7 +207,7 @@
                 transform: translateX(0);
             }
         }
-
+    
         @keyframes fadeInRight {
             from {
                 opacity: 0;
@@ -218,7 +218,7 @@
                 transform: translateX(0);
             }
         }
-
+    
         @keyframes scaleIn {
             from {
                 opacity: 0;
@@ -229,7 +229,7 @@
                 transform: scale(1);
             }
         }
-
+    
         @keyframes bounce {
             0%, 20%, 53%, 80%, 100% {
                 transform: translate3d(0,0,0);
@@ -244,7 +244,7 @@
                 transform: translate3d(0, -4px, 0);
             }
         }
-
+    
         @keyframes rotateIn {
             from {
                 opacity: 0;
@@ -255,75 +255,75 @@
                 transform: rotate(0deg);
             }
         }
-
+    
         @keyframes shake {
             0%, 100% { transform: translateX(0); }
             10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
             20%, 40%, 60%, 80% { transform: translateX(10px); }
         }
-
+    
         @keyframes glow {
             0%, 100% { box-shadow: 0 0 5px rgba(185, 28, 28, 0.5); }
             50% { box-shadow: 0 0 20px rgba(185, 28, 28, 0.8), 0 0 30px rgba(185, 28, 28, 0.6); }
         }
-
+    
         @keyframes typing {
             from { width: 0; }
             to { width: 100%; }
         }
-
+    
         @keyframes blink {
             0%, 50% { border-color: transparent; }
             51%, 100% { border-color: #FFFFFF; }
         }
-
+    
         /* Animation classes */
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(50px);
             transition: all 0.8s ease-out;
         }
-
+    
         .animate-on-scroll.animate-in {
             opacity: 1;
             transform: translateY(0);
         }
-
+    
         .bounce-animation {
             animation: bounce 2s infinite;
         }
-
+    
         .glow-effect {
             animation: glow 2s ease-in-out infinite alternate;
         }
-
+    
         .typing-effect {
             overflow: hidden;
             white-space: nowrap;
             border-right: 3px solid #FFFFFF;
             animation: typing 3s steps(30, end), blink 1s step-end infinite;
         }
-
+    
         .hero-content {
             max-width: 800px;
             z-index: 1;
             position: relative;
         }
-
+    
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
             animation: slideUp 1s ease-out, glow 3s ease-in-out infinite alternate;
         }
-
+    
         .hero p {
             font-size: 1.3rem;
             margin-bottom: 2rem;
             opacity: 0.9;
             animation: slideUp 1s ease-out 0.3s both;
         }
-
+    
         .cta-button {
             display: inline-block;
             background: #FFFFFF;
@@ -336,38 +336,38 @@
             box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
             animation: slideUp 1s ease-out 0.6s both, bounce 2s 1s infinite;
         }
-
+    
         .dark-mode .cta-button {
             background: #d73737;
             color: #FFFFFF;
         }
-
+    
         .cta-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
             background: #F8F8F8;
         }
-
+    
         .dark-mode .cta-button:hover {
             background: #b91c1c;
         }
-
+    
         /* Services Section */
         .services {
             padding: 100px 0;
             background: #F8F8F8;
         }
-
+    
         .dark-mode .services {
             background: #333333;
         }
-
+    
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
         }
-
+    
         .section-title {
             text-align: center;
             font-size: 2.5rem;
@@ -375,11 +375,11 @@
             color: #333;
             position: relative;
         }
-
+    
         .dark-mode .section-title {
             color: #F8F8F8;
         }
-
+    
         .section-title::after {
             content: '';
             position: absolute;
@@ -390,14 +390,14 @@
             height: 3px;
             background: #b91c1c;
         }
-
+    
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 4rem;
         }
-
+    
         .service-card {
             background: white;
             padding: 2rem;
@@ -410,99 +410,99 @@
             flex-direction: column;
             justify-content: space-between;
         }
-
+    
         .dark-mode .service-card {
             background: #333333;
             color: #F8F8F8;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
-
+    
         .service-card:hover {
             transform: translateY(-10px) scale(1.02);
             box-shadow: 0 20px 40px rgba(0,0,0,0.15);
             border-color: #b91c1c;
         }
-
+    
         .service-icon {
             font-size: 3rem;
             color: #b91c1c;
             margin-bottom: 1rem;
             display: block;
         }
-
+    
         .service-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
             color: #333;
         }
-
+    
         .dark-mode .service-card h3 {
             color: #F8F8F8;
         }
-
+    
         .service-card p {
             color: #666;
             line-height: 1.6;
-            flex-grow: 1; /* لتمدد الفقرة وتدفع الزر للأسفل */
+            flex-grow: 1;
         }
-
+    
         .dark-mode .service-card p {
             color: #ccc;
         }
-
+    
         /* About Section */
         .about {
             padding: 100px 0;
             background: white;
         }
-
+    
         .dark-mode .about {
             background: #1a1a1a;
         }
-
+    
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
         }
-
+    
         .about-text h2 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
             color: #333;
         }
-
+    
         .dark-mode .about-text h2 {
             color: #F8F8F8;
         }
-
+    
         .about-text p {
             font-size: 1.1rem;
             line-height: 1.8;
             color: #666;
             margin-bottom: 1.5rem;
         }
-
+    
         .dark-mode .about-text p {
             color: #ccc;
         }
-
+    
         .about-image {
             position: relative;
             overflow: hidden;
             border-radius: 15px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.1);
             height: 400px;
-            display: flex; /* إضافة هذا لجعل محتوى الصورة يتمركز */
+            display: flex;
             justify-content: center;
             align-items: center;
         }
-
+    
         .dark-mode .about-image {
             box-shadow: 0 15px 35px rgba(0,0,0,0.3);
         }
-
+    
         .about-image::before {
             content: '';
             position: absolute;
@@ -513,16 +513,16 @@
             background: linear-gradient(135deg, rgba(185, 28, 28, 0.4), rgba(215, 55, 55, 0.4));
             z-index: 1;
         }
-
+    
         .about-video {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* لضمان تغطية الفيديو للمساحة بالكامل دون تشويه */
+            object-fit: cover;
             position: absolute;
             top: 0;
             left: 0;
-            z-index: 0; /* تأكد من أن الفيديو يقع خلف المحتوى */
-            border-radius: 15px; /* للحفاظ على حدود مستديرة */
+            z-index: 0;
+            border-radius: 15px;
         }
         
         /* Contact Section */
@@ -531,26 +531,26 @@
             background: #b91c1c;
             color: white;
         }
-
+    
         .dark-mode .contact {
             background: #333333;
         }
-
+    
         .contact-form {
             max-width: 600px;
             margin: 0 auto;
         }
-
+    
         .form-group {
             margin-bottom: 2rem;
         }
-
+    
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
             font-weight: bold;
         }
-
+    
         .form-group input,
         .form-group textarea {
             width: 100%;
@@ -562,17 +562,17 @@
             color: white;
             backdrop-filter: blur(10px);
         }
-
+    
         .dark-mode .form-group input,
         .dark-mode .form-group textarea {
             background: rgba(0,0,0,0.2);
         }
-
+    
         .form-group input::placeholder,
         .form-group textarea::placeholder {
             color: rgba(255,255,255,0.7);
         }
-
+    
         .submit-btn {
             background: #FFFFFF;
             color: #b91c1c;
@@ -584,17 +584,17 @@
             transition: all 0.3s ease;
             width: 100%;
         }
-
+    
         .dark-mode .submit-btn {
             background: #d73737;
             color: #FFFFFF;
         }
-
+    
         .submit-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
         }
-
+    
         /* Footer */
         .footer {
             background: #1a1a1a;
@@ -602,30 +602,30 @@
             padding: 3rem 0 1rem;
             text-align: center;
         }
-
+    
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-bottom: 2rem;
         }
-
+    
         .footer-section h3 {
             margin-bottom: 1rem;
             color: #FFFFFF;
         }
-
+    
         .social-links a {
             color: white;
             font-size: 1.5rem;
             margin: 0 10px;
             transition: color 0.3s ease;
         }
-
+    
         .social-links a:hover {
             color: #d73737;
         }
-
+    
         /* Chatbot */
         .chatbot-toggle {
             position: fixed;
@@ -644,11 +644,11 @@
             z-index: 1000;
             animation: bounce 2s infinite, glow 2s ease-in-out infinite alternate;
         }
-
+    
         .chatbot-toggle:hover {
             transform: scale(1.1) rotate(15deg);
         }
-
+    
         .chatbot-window {
             position: fixed;
             bottom: 100px;
@@ -664,12 +664,12 @@
             animation: scaleIn 0.3s ease-out;
             transform-origin: bottom right;
         }
-
+    
         .dark-mode .chatbot-window {
             background: #333333;
             color: #F8F8F8;
         }
-
+    
         .chatbot-header {
             background: #b91c1c;
             color: white;
@@ -679,11 +679,11 @@
             justify-content: space-between;
             align-items: center;
         }
-
+    
         .dark-mode .chatbot-header {
             background: #333333;
         }
-
+    
         .chatbot-messages {
             flex: 1;
             padding: 1rem;
@@ -692,7 +692,7 @@
             flex-direction: column;
             gap: 1rem;
         }
-
+    
         .message {
             max-width: 80%;
             padding: 10px 15px;
@@ -700,25 +700,25 @@
             word-wrap: break-word;
             animation: fadeInUp 0.3s ease-out;
         }
-
+    
         .user-message {
             background: #e3f2fd;
             align-self: flex-end;
             margin-left: auto;
             animation: fadeInRight 0.3s ease-out;
         }
-
+    
         .dark-mode .user-message {
             background: #555;
             color: #F8F8F8;
         }
-
+    
         .bot-message {
             background: #f5f5f5;
             align-self: flex-start;
             animation: fadeInLeft 0.3s ease-out;
         }
-
+    
         .dark-mode .bot-message {
             background: #444;
             color: #F8F8F8;
@@ -730,7 +730,7 @@
             gap: 8px;
             margin-top: 10px;
         }
-
+    
         .bot-message .button-group button {
             background-color: #b91c1c;
             color: white;
@@ -740,30 +740,29 @@
             cursor: pointer;
             transition: background-color 0.2s;
         }
-
+    
         .dark-mode .bot-message .button-group button {
             background-color: #d73737;
         }
-
+    
         .bot-message .button-group button:hover {
             background-color: #a01a1a;
         }
-
+    
         .dark-mode .bot-message .button-group button:hover {
             background-color: #b91c1c;
         }
-
-
+    
         .chatbot-input {
             display: flex;
             padding: 1rem;
             border-top: 1px solid #eee;
         }
-
+    
         .dark-mode .chatbot-input {
             border-top: 1px solid #555;
         }
-
+    
         .chatbot-input input {
             flex: 1;
             padding: 10px;
@@ -772,13 +771,13 @@
             margin-right: 10px;
             background: #f5f5f5;
         }
-
+    
         .dark-mode .chatbot-input input {
             background: #444;
             color: #F8F8F8;
             border: 1px solid #555;
         }
-
+    
         .chatbot-input button {
             background: #b91c1c;
             color: white;
@@ -787,7 +786,7 @@
             border-radius: 20px;
             cursor: pointer;
         }
-
+    
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-menu {
@@ -806,20 +805,20 @@
                 width: 90%;
                 right: 5%;
                 left: 5%;
-                height: 70vh; /* لتكون أكبر قليلاً على الجوال */
+                height: 70vh;
                 bottom: 20px;
             }
-
+    
             .mode-toggle, .lang-toggle {
                 padding: 8px 12px;
                 font-size: 0.9rem;
             }
-
+    
             .mode-toggle {
                 right: 70px;
             }
         }
-
+    
         /* Language specific styles */
         [dir="ltr"] .nav-container {
             flex-direction: row-reverse;
@@ -829,12 +828,12 @@
             right: 20px;
             left: auto;
         }
-
+    
         [dir="ltr"] .mode-toggle {
             right: 80px;
             left: auto;
         }
-
+    
         /* تعديلات جديدة */
         .service-card .cta-button {
             padding: 10px 20px;
@@ -842,9 +841,102 @@
             margin-top: 15px;
             display: inline-block;
         }
+    
+        /* Smart Nest Products Section */
+        .smart-nest {
+            padding: 100px 0;
+            background: #f5f5f5;
+        }
+    
+        .dark-mode .smart-nest {
+            background: #2a2a2a;
+        }
+    
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+    
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+    
+        .dark-mode .product-card {
+            background: #333;
+        }
+    
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+    
+        .product-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+    
+        .product-info {
+            padding: 1.5rem;
+        }
+    
+        .price-section {
+            background: #f8f8f8;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+    
+        .dark-mode .price-section {
+            background: #333;
+        }
+    
+        .nfc-section {
+            padding: 2rem;
+            background: #f0f0f0;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+    
+        .dark-mode .nfc-section {
+            background: #3a3a3a;
+        }
+    
+        .more-info-btn {
+            display: inline-block;
+            background: #b91c1c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+    
+        .more-info-btn:hover {
+            background: #9a1616;
+            transform: translateY(-3px);
+        }
     </style>
 </head>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سوشيال نيست - Social Nest</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
+    <!-- أزرار التحكم العلوية -->
     <button class="mode-toggle" onclick="toggleDarkMode()">
         <i class="fas fa-moon"></i>
         <span class="ar-text">الوضع الليلي</span>
@@ -856,6 +948,7 @@
         <span class="en-text" style="display: none;">العربية</span>
     </button>
 
+    <!-- الهيدر -->
     <header class="header">
         <nav class="nav-container">
             <div class="logo">
@@ -867,11 +960,12 @@
                 <li><a href="#home" class="ar-text">الرئيسية</a><a href="#home" class="en-text" style="display: none;">Home</a></li>
                 <li><a href="#services" class="ar-text">خدماتنا</a><a href="#services" class="en-text" style="display: none;">Services</a></li>
                 <li><a href="#about" class="ar-text">من نحن</a><a href="#about" class="en-text" style="display: none;">About</a></li>
-                <li><a href="contact_us_page.html" class="ar-text">تواصل معنا</a><a href="contact_us_page.html" class="en-text" style="display: none;">Contact</a></li>
+                <li><a href="#contact" class="ar-text">تواصل معنا</a><a href="#contact" class="en-text" style="display: none;">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- قسم الهيرو -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>
@@ -882,13 +976,14 @@
                 <span class="ar-text">شركة سوشيال نيست - خبراء التسويق الرقمي وإدارة وسائل التواصل الاجتماعي</span>
                 <span class="en-text" style="display: none;">Social Nest - Digital Marketing & Social Media Management Experts</span>
             </p>
-            <a href="contact_us_page.html" class="cta-button">
+            <a href="#contact" class="cta-button">
                 <span class="ar-text">ابدأ مشروعك الآن</span>
                 <span class="en-text" style="display: none;">Start Your Project Now</span>
             </a>
         </div>
     </section>
 
+    <!-- قسم الخدمات -->
     <section id="services" class="services">
         <div class="container">
             <h2 class="section-title animate-on-scroll">
@@ -896,6 +991,7 @@
                 <span class="en-text" style="display: none;">Our Premium Services</span>
             </h2>
             <div class="services-grid">
+                <!-- بطاقة الخدمة 1 -->
                 <div class="service-card animate-on-scroll" data-service="digital-marketing">
                     <i class="fas fa-bullhorn service-icon"></i>
                     <h3>
@@ -907,7 +1003,9 @@
                         <span class="en-text" style="display: none;">Innovative marketing strategies to increase brand awareness and maximize ROI</span>
                     </p>
                 </div>
-                <div class="service-card animate-on-scroll" style="transition-delay: 0.1s" data-service="social-media-management">
+                
+                <!-- بطاقة الخدمة 2 -->
+                <div class="service-card animate-on-scroll" data-service="social-media-management">
                     <i class="fas fa-share-alt service-icon"></i>
                     <h3>
                         <span class="ar-text">إدارة وسائل التواصل</span>
@@ -918,7 +1016,9 @@
                         <span class="en-text" style="display: none;">Professional management of your social media accounts with engaging and impactful content</span>
                     </p>
                 </div>
-                <div class="service-card animate-on-scroll" style="transition-delay: 0.2s" data-service="data-analytics">
+                
+                <!-- بطاقة الخدمة 3 -->
+                <div class="service-card animate-on-scroll" data-service="data-analytics">
                     <i class="fas fa-chart-line service-icon"></i>
                     <h3>
                         <span class="ar-text">تحليل البيانات</span>
@@ -929,7 +1029,9 @@
                         <span class="en-text" style="display: none;">Comprehensive analysis of your marketing campaigns with detailed reports for informed decisions</span>
                     </p>
                 </div>
-                <div class="service-card animate-on-scroll" style="transition-delay: 0.3s" data-service="creative-design">
+                
+                <!-- بطاقة الخدمة 4 -->
+                <div class="service-card animate-on-scroll" data-service="creative-design">
                     <i class="fas fa-palette service-icon"></i>
                     <h3>
                         <span class="ar-text">التصميم الإبداعي</span>
@@ -939,12 +1041,14 @@
                         <span class="ar-text">تصاميم بصرية مبتكرة تعكس هوية علامتك التجارية وتجذب انتباه جمهورك المستهدف</span>
                         <span class="en-text" style="display: none;">Innovative visual designs that reflect your brand identity and attract your target audience</span>
                     </p>
-                    <a href="social_nest_page.html" target="_blank" class="cta-button">
+                    <a href="file:///C:/Users/Mohamed%20Rabea/Downloads/Telegram%20Desktop/%D8%B3%D9%88%D8%B4%D9%8A%D8%A7%D9%84%20%D9%86%D9%8A%D8%B3%D8%AA/%D8%B5%D9%81%D8%AD%D8%A7%D8%AA%20%D9%85%D8%B9%D8%B1%D8%B6%20%D8%B3%D9%88%D8%B4%D9%8A%D8%A7%D9%84%20%D9%86%D9%8A%D8%B3%D8%AA/p1.html" target="_blank" class="cta-button">
                         <span class="ar-text">تصفح الصفحة</span>
                         <span class="en-text" style="display: none;">View Page</span>
                     </a>
                 </div>
-                <div class="service-card animate-on-scroll" style="transition-delay: 0.4s" data-service="seo-optimization">
+                
+                <!-- بطاقة الخدمة 5 -->
+                <div class="service-card animate-on-scroll" data-service="seo-optimization">
                     <i class="fas fa-search service-icon"></i>
                     <h3>
                         <span class="ar-text">تحسين محركات البحث</span>
@@ -955,7 +1059,9 @@
                         <span class="en-text" style="display: none;">Optimize your website to appear in top search results and increase organic traffic</span>
                     </p>
                 </div>
-                <div class="service-card animate-on-scroll" style="transition-delay: 0.5s" data-service="content-production">
+                
+                <!-- بطاقة الخدمة 6 -->
+                <div class="service-card animate-on-scroll" data-service="content-production">
                     <i class="fas fa-video service-icon"></i>
                     <h3>
                         <span class="ar-text">إنتاج المحتوى</span>
@@ -965,37 +1071,7 @@
                         <span class="ar-text">إنتاج محتوى متنوع من نصوص وصور وفيديوهات تفاعلية تحقق أهدافك التسويقية</span>
                         <span class="en-text" style="display: none;">Diverse content production including texts, images, and interactive videos to achieve your marketing goals</span>
                     </p>
-                    <a href="social_nest_page.html" target="_blank" class="cta-button">
-                        <span class="ar-text">تصفح الصفحة</span>
-                        <span class="en-text" style="display: none;">View Page</span>
-                    </a>
-                </div>
-                <div class="service-card animate-on-scroll" style="transition-delay: 0.6s" data-service="montage-motion">
-                    <i class="fas fa-film service-icon"></i>
-                    <h3>
-                        <span class="ar-text">مونتاج وموشن جرافيك</span>
-                        <span class="en-text" style="display: none;">Montage & Motion Graphics</span>
-                    </h3>
-                    <p>
-                        <span class="ar-text">نحوّل أفكارك إلى واقع مرئي جذاب من خلال خدمات المونتاج الاحترافية ومقاطع الموشن جرافيك المبتكرة.</span>
-                        <span class="en-text" style="display: none;">We transform your ideas into compelling visual realities through professional montage services and innovative motion graphics.</span>
-                    </p>
-                    <a href="social_nest_page.html" target="_blank" class="cta-button">
-                        <span class="ar-text">تصفح الصفحة</span>
-                        <span class="en-text" style="display: none;">View Page</span>
-                    </a>
-                </div>
-                <div class="service-card animate-on-scroll" style="transition-delay: 0.7s" data-service="voice-over">
-                    <i class="fas fa-microphone-alt service-icon"></i>
-                    <h3>
-                        <span class="ar-text">التعليق الصوتي</span>
-                        <span class="en-text" style="display: none;">Voice Over</span>
-                    </h3>
-                    <p>
-                        <span class="ar-text">خدمات تعليق صوتي احترافية لمقاطع الفيديو، الإعلانات، والوثائقيات بأصوات مميزة وجذابة.</span>
-                        <span class="en-text" style="display: none;">Professional voice-over services for videos, advertisements, and documentaries with distinctive and engaging voices.</span>
-                    </p>
-                    <a href="social_nest_page.html" target="_blank" class="cta-button">
+                    <a href="file:///C:/Users/Mohamed%20Rabea/Downloads/Telegram%20Desktop/%D8%B3%D9%88%D8%B4%D9%8A%D8%A7%D9%84%20%D9%86%D9%8A%D8%B3%D8%AA/%D8%B5%D9%81%D8%AD%D8%A7%D8%AA%20%D9%85%D8%B9%D8%B1%D8%B6%20%D8%B3%D9%88%D8%B4%D9%8A%D8%A7%D9%84%20%D9%86%D9%8A%D8%B3%D8%AA/p1.html" target="_blank" class="cta-button">
                         <span class="ar-text">تصفح الصفحة</span>
                         <span class="en-text" style="display: none;">View Page</span>
                     </a>
@@ -1004,6 +1080,7 @@
         </div>
     </section>
 
+    <!-- قسم من نحن -->
     <section id="about" class="about">
         <div class="container">
             <div class="about-content">
@@ -1027,7 +1104,7 @@
                 </div>
                 <div class="about-image animate-on-scroll">
                     <video autoplay muted loop playsinline class="about-video">
-                        <source src="your-video-file.mp4" type="video/mp4">
+                        <source src="1.mp4" type="video/mp4">
                         <span class="ar-text">متصفحك لا يدعم تشغيل الفيديو.</span>
                         <span class="en-text">Your browser does not support the video tag.</span>
                     </video>
@@ -1036,13 +1113,14 @@
         </div>
     </section>
 
+    <!-- قسم التواصل -->
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title animate-on-scroll">
                 <span class="ar-text">تواصل معنا</span>
                 <span class="en-text" style="display: none;">Contact Us</span>
             </h2>
-            <form class="contact-form animate-on-scroll" action="mailto:your-email@example.com" method="post" enctype="text/plain">
+            <form class="contact-form animate-on-scroll" action="mailto:socialnest37@gmail.com" method="post">
                 <div class="form-group">
                     <label>
                         <span class="ar-text">الاسم</span>
@@ -1079,6 +1157,7 @@
         </div>
     </section>
 
+    <!-- الفوتر -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -1098,10 +1177,9 @@
                         <span class="en-text" style="display: none;">Follow Us</span>
                     </h3>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/socialnest1?locale=ar_AR"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/socialnest1/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@socialnest1"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
@@ -1109,8 +1187,9 @@
                         <span class="ar-text">تواصل معنا</span>
                         <span class="en-text" style="display: none;">Contact Info</span>
                     </h3>
-                    <p>info@socialnest.com</p>
-                    <p>+1 234 567 8900</p>
+                    <p>socialnest37@gmail.com</p>
+                    <p>+201115238909</p>
+                    <p>+201115238910</p>
                 </div>
             </div>
             <div style="border-top: 1px solid #333; padding-top: 1rem; margin-top: 2rem;">
@@ -1119,10 +1198,11 @@
         </div>
     </footer>
 
+    <!-- شات بوت -->
     <button class="chatbot-toggle" onclick="toggleChat()">
         <i class="fas fa-comments"></i>
     </button>
-
+    
     <div class="chatbot-window" id="chatbot">
         <div class="chatbot-header">
             <h4>
@@ -1136,9 +1216,18 @@
                 <span class="ar-text">مرحباً بك في سوشيال نيست! كيف يمكنني مساعدتك اليوم؟</span>
                 <span class="en-text" style="display: none;">Welcome to Social Nest! How can I help you today?</span>
                 <div class="button-group">
-                    <button onclick="handleBotButtonClick('من أنتم؟')">من أنتم؟</button>
-                    <button onclick="handleBotButtonClick('ما هي خدماتكم؟')">ما هي خدماتكم؟</button>
-                    <button onclick="handleBotButtonClick('ما هي أسعار الكروت الذكية؟')">أسعار الكروت الذكية؟</button>
+                    <button onclick="handleBotButtonClick('من أنتم؟')">
+                        <span class="ar-text">من أنتم؟</span>
+                        <span class="en-text" style="display: none;">Who are you?</span>
+                    </button>
+                    <button onclick="handleBotButtonClick('ما هي خدماتكم؟')">
+                        <span class="ar-text">ما هي خدماتكم؟</span>
+                        <span class="en-text" style="display: none;">What are your services?</span>
+                    </button>
+                    <button onclick="handleBotButtonClick('كيف أتواصل معكم؟')">
+                        <span class="ar-text">كيف أتواصل معكم؟</span>
+                        <span class="en-text" style="display: none;">How can I contact you?</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -1234,12 +1323,12 @@
                 messageDiv.appendChild(buttonGroup);
             }
             chatbotMessages.appendChild(messageDiv);
-            chatbotMessages.scrollTop = chatbotMessages.scrollHeight; // التمرير للأسفل تلقائيًا
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
         }
 
         function handleBotButtonClick(action) {
-            addMessage('user', action); // عرض الرسالة التي تم الضغط عليها كرسالة من المستخدم
-            processBotResponse(action); // معالجة الرد
+            addMessage('user', action);
+            processBotResponse(action);
         }
 
         function sendMessage() {
@@ -1257,7 +1346,6 @@
             let buttons = null;
             const currentLang = document.documentElement.lang;
 
-            // Responses based on language
             const responses = {
                 ar: {
                     greeting: ['مرحباً بك مرة أخرى!', 'أهلاً وسهلاً!', 'كيف أستطيع مساعدتك اليوم؟', 'مرحباً! أنا مساعد سوشيال نيست الرقمي.'],
@@ -1281,12 +1369,16 @@
                     buttons: {
                         aboutUs: 'من أنتم؟',
                         services: 'ما هي خدماتكم؟',
-                        smartNest: 'عن سمارت نيست والكروت الذكية',
+                        smartNest: 'عن سمارت نيست',
                         cardPrices: 'أسعار الكروت الذكية',
                         freeOffers: 'العروض المجانية',
                         contact: 'تواصلوا معي',
                         mainMenu: 'العودة للقائمة الرئيسية'
-                    }
+                    },
+                    howAreYou: 'أنا بخير، شكراً لسؤالك! كيف يمكنني مساعدتك اليوم؟',
+                    whatsUp: 'أنا هنا لمساعدتك في أي استفسار لديك عن خدمات سوشيال نيست أو سمارت نيست!',
+                    canWeTalk: 'بالطبع! أنا هنا للإجابة على جميع استفساراتك. هل لديك سؤال محدد؟',
+                    needHelp: 'سأكون سعيداً بمساعدتك. هل تريد معرفة المزيد عن خدماتنا، الأسعار، أو لديك استفسار آخر؟'
                 },
                 en: {
                     greeting: ['Welcome back!', 'Hello there!', 'How can I assist you today?', 'Hi! I am Social Nest\'s digital assistant.'],
@@ -1310,18 +1402,20 @@
                     buttons: {
                         aboutUs: 'Who are you?',
                         services: 'What are your services?',
-                        smartNest: 'About Smart Nest & Smart Cards',
+                        smartNest: 'About Smart Nest',
                         cardPrices: 'Smart Card Prices',
                         freeOffers: 'Free Offers',
                         contact: 'Contact Us',
                         mainMenu: 'Back to Main Menu'
-                    }
+                    },
+                    howAreYou: 'I\'m doing well, thank you for asking! How can I assist you today?',
+                    whatsUp: 'I\'m here to help you with any inquiries about Social Nest or Smart Nest services!',
+                    canWeTalk: 'Of course! I\'m here to answer all your questions. Do you have a specific inquiry?',
+                    needHelp: 'I\'d be happy to help. Would you like to know more about our services, pricing, or have another question?'
                 }
             };
 
             const currentResponses = responses[currentLang];
-
-            // تحويل رسائل الترحيب
             const greetings = ['مرحبا', 'أهلاً', 'سلام', 'هاي', 'ازيك', 'مرحباً', 'صباح الخير', 'مساء الخير', 'كيف حالك', 'اهلا بك', 'hi', 'hello', 'hey', 'good morning', 'good evening', 'how are you'];
             const isGreeting = greetings.some(greeting => lowerCaseMessage.includes(greeting));
 
@@ -1331,6 +1425,25 @@
                     { text: currentResponses.buttons.aboutUs, action: 'من أنتم؟' },
                     { text: currentResponses.buttons.services, action: 'ما هي خدماتكم؟' },
                     { text: currentResponses.buttons.smartNest, action: 'عن سمارت نيست' }
+                ];
+            } else if (lowerCaseMessage.includes('كيف حالك') || lowerCaseMessage.includes('اخبارك') || lowerCaseMessage.includes('how are you') || lowerCaseMessage.includes('whats up')) {
+                botResponseText = currentResponses.howAreYou;
+                buttons = [
+                    { text: currentResponses.buttons.services, action: 'ما هي خدماتكم؟' },
+                    { text: currentResponses.buttons.smartNest, action: 'عن سمارت نيست' }
+                ];
+            } else if (lowerCaseMessage.includes('عامل إيه') || lowerCaseMessage.includes('ممكن نتكلم') || lowerCaseMessage.includes('can we talk')) {
+                botResponseText = currentResponses.canWeTalk;
+                buttons = [
+                    { text: currentResponses.buttons.aboutUs, action: 'من أنتم؟' },
+                    { text: currentResponses.buttons.contact, action: 'تواصلو معي' }
+                ];
+            } else if (lowerCaseMessage.includes('ممكن تساعدني') || lowerCaseMessage.includes('need help')) {
+                botResponseText = currentResponses.needHelp;
+                buttons = [
+                    { text: currentResponses.buttons.services, action: 'ما هي خدماتكم؟' },
+                    { text: currentResponses.buttons.cardPrices, action: 'أسعار الكروت الذكية؟' },
+                    { text: currentResponses.buttons.contact, action: 'تواصلوا معي' }
                 ];
             } else if (lowerCaseMessage.includes('من أنتم') || lowerCaseMessage.includes('عن الشركة') || lowerCaseMessage.includes('who are you') || lowerCaseMessage.includes('about company')) {
                 botResponseText = currentResponses.aboutUs + ' ' + currentResponses.contactPrompt;
@@ -1423,7 +1536,7 @@
                     { text: (currentLang === 'ar' ? 'اذهب لصفحة التواصل' : 'Go to Contact Page'), action: 'open_contact_page' }
                 ];
             } else if (lowerCaseMessage.includes('العودة للقائمة الرئيسية') || lowerCaseMessage.includes('main menu')) {
-                botResponseText = currentResponses.greeting[0]; // رد ترحيبي بسيط
+                botResponseText = currentResponses.greeting[0];
                 buttons = [
                     { text: currentResponses.buttons.aboutUs, action: 'من أنتم؟' },
                     { text: currentResponses.buttons.services, action: 'ما هي خدماتكم؟' },
@@ -1431,9 +1544,8 @@
                 ];
             } else if (lowerCaseMessage.includes('open_contact_page')) {
                 window.location.href = 'contact_us_page.html';
-                return; // لا نضيف رسالة بعد التوجيه
-            }
-            else {
+                return;
+            } else {
                 botResponseText = currentResponses.unknown;
                 buttons = [
                     { text: currentResponses.buttons.aboutUs, action: 'من أنتم؟' },
@@ -1443,40 +1555,90 @@
                 ];
             }
 
-            setTimeout(() => addMessage('bot', botResponseText, buttons), 500); // تأخير بسيط للرد
+            setTimeout(() => addMessage('bot', botResponseText, buttons), 500);
         }
 
-        // تحسين ربط الأزرار بخدمات محددة
-        document.querySelectorAll('.service-card').forEach(card => {
-            card.addEventListener('click', function() {
-                const service = this.dataset.service;
-                if (service) {
-                    toggleChat(); // افتح الدردشة
-                    setTimeout(() => {
-                        addMessage('user', this.querySelector('h3').textContent.trim()); // عرض عنوان الخدمة كرسالة من المستخدم
-                        processBotResponse(service); // معالجة الرد الخاص بهذه الخدمة
-                    }, 300);
-                }
-            });
+      // ربط جميع العناصر ذات الصلة بالشات بوت
+function connectElementsToChatbot() {
+    // ربط بطاقات الخدمات
+    document.querySelectorAll('.service-card').forEach(card => {
+        card.addEventListener('click', function() {
+            const service = this.dataset.service;
+            if (service) {
+                toggleChat();
+                setTimeout(() => {
+                    addMessage('user', this.querySelector('h3').textContent.trim());
+                    processBotResponse(service);
+                }, 300);
+            }
         });
-       // هذا الكود لمنع النقر بالزر الأيمن
-document.addEventListener('contextmenu', event => event.preventDefault());
+    });
 
-// هذا الكود لمحاولة منع فتح أدوات المطور (غير فعال بشكل كامل)
-document.onkeydown = function(e) {
-    if (e.keyCode == 123) { // F12
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { // Ctrl+Shift+I
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) { // Ctrl+Shift+J
-        return false;
-    }
-    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { // Ctrl+U
-        return false;
-    }
+    // ربط عناصر الأسعار
+    document.querySelectorAll('[data-price-info]').forEach(priceElement => {
+        priceElement.addEventListener('click', function() {
+            toggleChat();
+            setTimeout(() => {
+                addMessage('user', currentLang === 'ar' ? 'أسعار سمارت نيست' : 'Smart Nest Prices');
+                processBotResponse('أسعار سمارت نيست');
+            }, 300);
+        });
+    });
+
+    // ربط عناصر NFC
+    document.querySelectorAll('[data-nfc-info]').forEach(nfcElement => {
+        nfcElement.addEventListener('click', function() {
+            toggleChat();
+            setTimeout(() => {
+                addMessage('user', currentLang === 'ar' ? 'مميزات تقنية NFC' : 'NFC Technology Advantages');
+                processBotResponse('مميزات تقنية NFC');
+            }, 300);
+        });
+    });
+
+    // ربط عناصر المنتجات
+    document.querySelectorAll('[data-product]').forEach(product => {
+        product.addEventListener('click', function() {
+            const productType = this.dataset.product;
+            toggleChat();
+            setTimeout(() => {
+                addMessage('user', this.textContent.trim());
+                processBotResponse(productType);
+            }, 300);
+        });
+    });
+
+    // ربط روابط "المزيد من المعلومات"
+    document.querySelectorAll('.more-info-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const topic = this.dataset.topic || 'معلومات إضافية';
+            toggleChat();
+            setTimeout(() => {
+                addMessage('user', topic);
+                processBotResponse(topic);
+            }, 300);
+        });
+    });
 }
+
+// استدعاء الدالة عند تحميل الصفحة
+window.addEventListener('load', function() {
+    connectElementsToChatbot();
+});
+
+        // منع النقر بالزر الأيمن
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // محاولة منع فتح أدوات المطور
+        document.onkeydown = function(e) {
+            if (e.keyCode == 123 || // F12
+                (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) || // Ctrl+Shift+I
+                (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) || // Ctrl+Shift+J
+                (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))) { // Ctrl+U
+                return false;
+            }
+        };
     </script>
 </body>
 </html>
