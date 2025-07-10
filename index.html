@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سوشيال نيست - Social Nest</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+    <!-- أزرار التحكم العلوية -->
+    <button class="mode-toggle" onclick="toggleDarkMode()">
+        <i class="fas fa-moon"></i>
+        <span class="ar-text">الوضع الليلي</span>
+        <span class="en-text" style="display: none;">Dark Mode</span>
+    </button>
+
+    <button class="lang-toggle" onclick="toggleLanguage()">
+        <span class="ar-text">English</span>
+        <span class="en-text" style="display: none;">العربية</span>
+    </button>
+
+    <!-- الهيدر -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <i class="fas fa-share-alt"></i>
+                <span class="ar-text">سوشيال نيست</span>
+                <span class="en-text" style="display: none;">SOCIAL NEST</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="ar-text">الرئيسية</a><a href="#home" class="en-text" style="display: none;">Home</a></li>
+                <li><a href="#services" class="ar-text">خدماتنا</a><a href="#services" class="en-text" style="display: none;">Services</a></li>
+                <li><a href="#about" class="ar-text">من نحن</a><a href="#about" class="en-text" style="display: none;">About</a></li>
+                <li><a href="#contact" class="ar-text">تواصل معنا</a><a href="#contact" class="en-text" style="display: none;">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- قسم الهيرو -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>
+                <span class="ar-text">نحلق بعلامتك التجارية إلى آفاق جديدة</span>
+                <span class="en-text" style="display: none;">Elevate Your Brand to New Heights</span>
+            </h1>
+            <p>
+                <span class="ar-text">شركة سوشيال نيست - خبراء التسويق الرقمي وإدارة وسائل التواصل الاجتماعي</span>
+                <span class="en-text" style="display: none;">Social Nest - Digital Marketing & Social Media Management Experts</span>
+            </p>
+            <a href="#contact" class="cta-button">
+                <span class="ar-text">ابدأ مشروعك الآن</span>
+                <span class="en-text" style="display: none;">Start Your Project Now</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- قسم الخدمات -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">
+                <span class="ar-text">خدماتنا المتميزة</span>
+                <span class="en-text" style="display: none;">Our Premium Services</span>
+            </h2>
+            <div class="services-grid">
+                <!-- بطاقة الخدمة 1 -->
+                <div class="service-card animate-on-scroll" data-service="digital-marketing">
+                    <i class="fas fa-bullhorn service-icon"></i>
+                    <h3>
+                        <span class="ar-text">التسويق الرقمي</span>
+                        <span class="en-text" style="display: none;">Digital Marketing</span>
+                    </h3>
+                    <p>
+                        <span class="ar-text">استراتيجيات تسويقية مبتكرة لزيادة الوعي بعلامتك التجارية وتحقيق أقصى عائد على الاستثمار</span>
+                        <span class="en-text" style="display: none;">Innovative marketing strategies to increase brand awareness and maximize ROI</span>
+                    </p>
+                </div>
+                
+                <!-- بطاقة الخدمة 2 -->
+                <div class="service-card animate-on-scroll" data-service="social-media-management">
+                    <i class="fas fa-share-alt service-icon"></i>
+                    <h3>
+                        <span class="ar-text">إدارة وسائل التواصل</span>
+                        <span class="en-text" style="display: none;">Social Media Management</span>
+                    </h3>
+                    <p>
+                        <span class="ar-text">إدارة احترافية لحساباتك على جميع منصات التواصل الاجتماعي مع محتوى جذاب ومؤثر</span>
+                        <span class="en-text" style="display: none;">Professional management of your social media accounts with engaging and impactful content</span>
+                    </p>
+                </div>
+                
+                <!-- بطاقة الخدمة 3 -->
+                <div class="service-card animate-on-scroll" data-service="data-analytics">
+                    <i class="fas fa-chart-line service-icon"></i>
+                    <h3>
+                        <span class="ar-text">تحليل البيانات</span>
+                        <span class="en-text" style="display: none;">Data Analytics</span>
+                    </h3>
+                    <p>
+                        <span class="ar-text">تحليل شامل لأداء حملاتك التسويقية مع تقارير مفصلة لاتخاذ قرارات مدروسة</span>
+                        <span class="en-text" style="display: none;">Comprehensive analysis of your marketing campaigns with detailed reports for informed decisions</span>
+                    </p>
+                </div>
+                
+                <!-- بطاقة الخدمة 4 -->
+                <div class="service-card animate-on-scroll" data-service="creative-design">
+                    <i class="fas fa-palette service-icon"></i>
+                    <h3>
+                        <span class="ar-text">التصميم الإبداعي</span>
+                        <span class="en-text" style="display: none;">Creative Design</span>
+                    </h3>
+                    <p>
+                        <span class="ar-text">تصاميم بصرية مبتكرة تعكس هوية علامتك التجارية وتجذب انتباه جمهورك المستهدف</span>
+                        <span class="en-text" style="display: none;">Innovative visual designs that reflect your brand identity and attract your target audience</span>
+                    </p>
+                    <a href="p1.html" target="_blank" class="cta-button">
+                        <span class="ar-text">تصفح الصفحة</span>
+                        <span class="en-text" style="display: none;">View Page</span>
+                    </a>
+                </div>
+                
+                <!-- بطاقة الخدمة 5 -->
+                <div class="service-card animate-on-scroll" data-service="seo-optimization">
+                    <i class="fas fa-search service-icon"></i>
+                    <h3>
+                        <span class="ar-text">تحسين محركات البحث</span>
+                        <span class="en-text" style="display: none;">SEO Optimization</span>
+                    </h3>
+                    <p>
+                        <span class="ar-text">تحسين موقعك ليظهر في المراكز الأولى في نتائج البحث وزيادة الزيارات العضوية</span>
+                        <span class="en-text" style="display: none;">Optimize your website to appear in top search results and increase organic traffic</span>
+                    </p>
+                </div>
+                
+                <!-- بطاقة الخدمة 6 -->
+                <div class="service-card animate-on-scroll" data-service="content-production">
+                    <i class="fas fa-video service-icon"></i>
+                    <h3>
+                        <span class="ar-text">إنتاج المحتوى</span>
+                        <span class="en-text" style="display: none;">Content Production</span>
+                    </h3>
+                    <p>
+                        <span class="ar-text">إنتاج محتوى متنوع من نصوص وصور وفيديوهات تفاعلية تحقق أهدافك التسويقية</span>
+                        <span class="en-text" style="display: none;">Diverse content production including texts, images, and interactive videos to achieve your marketing goals</span>
+                    </p>
+                    <a href="p1.html" target="_blank" class="cta-button">
+                        <span class="ar-text">تصفح الصفحة</span>
+                        <span class="en-text" style="display: none;">View Page</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم من نحن -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text animate-on-scroll">
+                    <h2>
+                        <span class="ar-text">من نحن</span>
+                        <span class="en-text" style="display: none;">About Us</span>
+                    </h2>
+                    <p>
+                        <span class="ar-text">سوشيال نيست هي شركة رائدة في مجال التسويق الرقمي وإدارة وسائل التواصل الاجتماعي. نحن فريق من المحترفين المتخصصين في بناء العلامات التجارية الرقمية وتطوير استراتيجيات تسويقية مبتكرة.</span>
+                        <span class="en-text" style="display: none;">Social Nest is a leading company in digital marketing and social media management. We are a team of professionals specialized in building digital brands and developing innovative marketing strategies.</span>
+                    </p>
+                    <p>
+                        <span class="ar-text">رؤيتنا هي أن نكون الشريك الأول للشركات في رحلتها نحو النجاح الرقمي، من خلال تقديم حلول متكاملة تجمع بين الإبداع والتكنولوجيا.</span>
+                        <span class="en-text" style="display: none;">Our vision is to be the primary partner for companies in their journey towards digital success, by providing integrated solutions that combine creativity and technology.</span>
+                    </p>
+                    <p>
+                        <span class="ar-text">نفخر بخبرتنا الواسعة في السوق المحلي والعالمي، ونلتزم بتحقيق أعلى معايير الجودة في جميع مشاريعنا.</span>
+                        <span class="en-text" style="display: none;">We take pride in our extensive experience in local and global markets, and we are committed to achieving the highest quality standards in all our projects.</span>
+                    </p>
+                </div>
+                <div class="about-image animate-on-scroll">
+                    <video autoplay muted loop playsinline class="about-video">
+                        <source src="1.mp4" type="video/mp4">
+                        <span class="ar-text">متصفحك لا يدعم تشغيل الفيديو.</span>
+                        <span class="en-text">Your browser does not support the video tag.</span>
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التواصل -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">
+                <span class="ar-text">تواصل معنا</span>
+                <span class="en-text" style="display: none;">Contact Us</span>
+            </h2>
+            <form id="myContactForm" class="contact-form animate-on-scroll" action="https://formspree.io/f/mwpbdgnb" method="POST">
+                <div class="form-group">
+                    <label>
+                        <span class="ar-text">الاسم</span>
+                        <span class="en-text" style="display: none;">Name</span>
+                    </label>
+                    <input type="text" name="name" placeholder="اسمك الكامل / Your Full Name" required>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <span class="ar-text">البريد الإلكتروني</span>
+                        <span class="en-text" style="display: none;">Email</span>
+                    </label>
+                    <input type="email" name="email" placeholder="بريدك الإلكتروني / Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <span class="ar-text">رقم الهاتف</span>
+                        <span class="en-text" style="display: none;">Phone</span>
+                    </label>
+                    <input type="tel" name="phone" placeholder="رقم هاتفك / Your Phone Number">
+                </div>
+                <div class="form-group">
+                    <label>
+                        <span class="ar-text">الرسالة</span>
+                        <span class="en-text" style="display: none;">Message</span>
+                    </label>
+                    <textarea name="message" rows="5" placeholder="اكتب رسالتك هنا / Write your message here" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <span class="ar-text">إرسال الرسالة</span>
+                    <span class="en-text" style="display: none;">Send Message</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>
+                        <span class="ar-text">سوشيال نيست</span>
+                        <span class="en-text" style="display: none;">SOCIAL NEST</span>
+                    </h3>
+                    <p>
+                        <span class="ar-text">شريكك في النجاح الرقمي</span>
+                        <span class="en-text" style="display: none;">Your Digital Success Partner</span>
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>
+                        <span class="ar-text">تابعنا</span>
+                        <span class="en-text" style="display: none;">Follow Us</span>
+                    </h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/socialnest1?locale=ar_AR"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/socialnest1/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@socialnest1"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>
+                        <span class="ar-text">تواصل معنا</span>
+                        <span class="en-text" style="display: none;">Contact Info</span>
+                    </h3>
+                    <p>socialnest37@gmail.com</p>
+                    <p>+201115238909</p>
+                    <p>+201115238910</p>
+                </div>
+            </div>
+            <div style="border-top: 1px solid #333; padding-top: 1rem; margin-top: 2rem;">
+                <p>&copy; 2025 Social Nest. <span class="ar-text">جميع الحقوق محفوظة</span><span class="en-text" style="display: none;">All Rights Reserved</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- شات بوت -->
+    <button class="chatbot-toggle" onclick="toggleChat()">
+        <i class="fas fa-comments"></i>
+    </button>
+    
+    <div class="chatbot-window" id="chatbot">
+        <div class="chatbot-header">
+            <h4>
+                <span class="ar-text">مساعد سوشيال نيست</span>
+                <span class="en-text" style="display: none;">Social Nest Assistant</span>
+            </h4>
+            <button onclick="toggleChat()" style="background: none; border: none; color: white; font-size: 1.2rem;">×</button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages">
+            <div class="message bot-message">
+                <span class="ar-text">مرحباً بك في سوشيال نيست! كيف يمكنني مساعدتك اليوم؟</span>
+                <span class="en-text" style="display: none;">Welcome to Social Nest! How can I help you today?</span>
+                <div class="button-group">
+                    <button onclick="handleBotButtonClick('من أنتم؟')">
+                        <span class="ar-text">من أنتم؟</span>
+                        <span class="en-text" style="display: none;">Who are you?</span>
+                    </button>
+                    <button onclick="handleBotButtonClick('ما هي خدماتكم؟')">
+                        <span class="ar-text">ما هي خدماتكم؟</span>
+                        <span class="en-text" style="display: none;">What are your services?</span>
+                    </button>
+                    <button onclick="handleBotButtonClick('كيف أتواصل معكم؟')">
+                        <span class="ar-text">كيف أتواصل معكم؟</span>
+                        <span class="en-text" style="display: none;">How can I contact you?</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbot-input" placeholder="اكتب رسالتك هنا... / Type your message here..." onkeypress="if(event.keyCode == 13) document.querySelector('#chatbot-input + button').click()">
+            <button onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="1.js"></script>
+</body>
+</html>
